@@ -2,8 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy as sci
 import scipy.integrate as ode
-from celluloid import Camera
-import mpl_toolkits.mplot3d.axes3d as p3
+#from celluloid import Camera
+import mpl_toolkits
+from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.animation as animation
 
 
@@ -108,7 +109,7 @@ r3_sol=three_body_sol[:,6:9]
 #Create figure
 fig = plt.figure()
 ax = fig.add_subplot(111,projection="3d")
-camera = Camera(fig)
+#camera = Camera(fig)
 
 def update_lines(num, dataLines, lines):
     for line, data in zip(lines, dataLines):
